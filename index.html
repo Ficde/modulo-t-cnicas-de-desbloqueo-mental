@@ -512,9 +512,9 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 let c = 0;
-                if (v.includes('creatividad') || v.includes('ideas')) c++;
-                if (v.includes('pensamiento') || v.includes('surgen')) c++;
-                if (v.includes('nuevas') || v.includes('situación') || v.includes('experiencias')) c++;
+                if (v.includes('creatividad') || v.includes('capacidad')) c++;
+                if (v.includes('ideas') || v.includes('asociaciones')) c++;
+                if (v.includes('observaciones') || v.includes('situación') || v.includes('experiencias')) c++;
                 return c >= 2;
             },
             tutor: 'Pensá cómo surgen las ideas nuevas.',
@@ -529,8 +529,8 @@ const modules = {
                 const v = normalizar(raw);
                 let c = 0;
                 if (v.includes('creatividad')) c++;
-                if (v.includes('innovación') || v.includes('cambio')) c++;
-                if (v.includes('idea ') || v.includes('práctica') || v.includes('aplicar')) c++;
+                if (v.includes('innovación') || v.includes('genera')) c++;
+                if (v.includes('idea') || v.includes('pract') || v.includes('produciendo')) c++;
                 return c >= 2;
             },
             tutor: 'Pensá qué ocurre cuando una idea se pone en práctica.',
@@ -560,7 +560,7 @@ const modules = {
                 let c = 0;
                 if (v.includes('trabajo') || v.includes('perseverancia')) c++;
                 if (v.includes('creatividad') || v.includes('ideas')) c++;
-                if (v.includes('esfuerzo') || v.includes('espontánea') || v.includes('perseverancia') || v.includes('desafíos')) c++;
+                if (v.includes('construye') || v.includes('espont') || v.includes('perseverancia') || v.includes('desaf')) c++;
                 return c >= 2;
             },
             tutor: 'Pensá en el esfuerzo detrás de las ideas.',
@@ -575,7 +575,7 @@ const modules = {
         '1. La creatividad permite generar ______ nuevas<br>' +
         '2. La innovación implica poner las ideas en ______<br>' +
         '3. El cambio se produce cuando la idea se ______',
-    blanks: ['ideas', 'práctica', 'aplica'],
+    blanks: ['ideas', 'pract', 'aplica'],
     tutor: 'Pensá en el proceso desde la idea hasta el cambio.',
     explanation: 'La creatividad genera ideas y la innovación las aplica para producir cambios.'
 },
@@ -587,8 +587,8 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('asociación') || v.includes('ideas')) &&
-                    (v.includes('creatividad') || v.includes('conocidas') || v.includes('relacionar') || v.includes('perspectivas'))
+                    (v.includes('asocia') || v.includes('ideas')) &&
+                    (v.includes('soluciones') || v.includes('existentes') || v.includes('relacionar') || v.includes('perspectivas'))
                 );
             },
             tutor: 'Pensá cómo se conectan ideas conocidas.',
@@ -616,8 +616,8 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 let c = 0;
-                if (v.includes('ética') || v.includes('creatividad') || v.includes('impacto')) c++;
-                if (v.includes('consecuencias') || v.includes('analizarse') || v.includes('efectos') || v.includes('innovación')) c++;
+                if (v.includes('etic') || v.includes('creatividad') || v.includes('avance')) c++;
+                if (v.includes('sociedad') || v.includes('analizarse') || v.includes('efectos') || v.includes('innovaci')) c++;
                 return c >= 2;
             },
             tutor: 'Pensá en las consecuencias de las ideas.',
@@ -644,7 +644,7 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('creatividad') || v.includes('innovación')) &&
+                    (v.includes('creatividad') || v.includes('capacidad')) &&
                     (v.includes('ideas') || v.includes('generar') || v.includes('transforma'))
                 );
             },
@@ -664,7 +664,7 @@ const modules = {
                 const v = normalizar(raw);
                 return (
                     (v.includes('creatividad') || v.includes('proceso')) &&
-                    (v.includes('desarrollo') || v.includes('etapas') || v.includes('prueba') || v.includes('espontánea') || v.includes('ajuste'))
+                    (v.includes('desarrollo') || v.includes('inmediata') || v.includes('asocia') || v.includes('espont') || v.includes('ajuste'))
                 );
             },
             tutor: 'Pensá en las etapas que atraviesa una idea.',
@@ -678,9 +678,9 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('ideas') || v.includes('acción') || v.includes('innovación')) &&
-                    v.includes('aplica') &&
-                    (v.includes('creativas') || v.includes('planifican') || v.includes('evalúan'))
+                    (v.includes('ideas') || v.includes('transforman') || v.includes('innovaci')) &&
+                    v.includes('posibilidades') &&
+                    (v.includes('creativas') || v.includes('planifican') || v.includes('evalu'))
                 );
             },
             tutor: 'Pensá qué falta cuando una idea no se aplica.',
@@ -710,7 +710,7 @@ const modules = {
                 const v = normalizar(raw);
                 return (
                     (v.includes('prejuicios') || v.includes('decisiones')) &&
-                    (v.includes('rigidez') || v.includes('cuestionar')) &&
+                    (v.includes('condicionan') || v.includes('cuestionar')) &&
                     (v.includes('establecido ') || v.includes('limitan') || v.includes('posibilidad'))
                 );
             },
@@ -738,8 +738,8 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('error') || v.includes('aprendizaje')) &&
-                    (v.includes('creatividad') || v.includes('resulta') || v.includes('aprender') || v.includes('fundamental') || v.includes('proceso'))
+                    (v.includes('error') || v.includes('revisar')) &&
+                    (v.includes('experiencia') || v.includes('ajust') || v.includes('aprender') || v.includes('fundamental') || v.includes('proceso'))
                 );
             },
             tutor: 'Pensá qué se aprende cuando algo no resulta.',
@@ -768,8 +768,8 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('ética') || v.includes('impacto') || v.includes('responsabilidad')) &&
-                    (v.includes('efectos') || v.includes('promoviendo') || v.includes('beneficios') || v.includes('consecuencias'))
+                    (v.includes('Evaluar') || v.includes('impact') || v.includes('responsable')) &&
+                    (v.includes('evita') || v.includes('promoviendo') || v.includes('beneficios') || v.includes('consecuencias'))
                 );
             },
             tutor: 'Pensá en los efectos de una idea aplicada.',
@@ -796,8 +796,8 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('análisis') || v.includes('creatividad')) &&
-                    (v.includes('pensamiento') || v.includes('orientada') || v.includes('desarrollar'))
+                    (v.includes('anali') || v.includes('creatividad')) &&
+                    (v.includes('prejuicios') || v.includes('orientada') || v.includes('desarrollar'))
                 );
             },
             tutor: 'Pensá qué bloqueos podés revisar.',
@@ -819,7 +819,7 @@ const modules = {
                     (
                         (v.includes('estrategias') || v.includes('miedo') || v.includes('error')) &&
                         (v.includes('generan') || v.includes('bloqueo') || v.includes('diferentes')) &&
-                        (v.includes('alternativas') || v.includes('explorar') || v.includes('repetición') || v.includes('creativo'))
+                        (v.includes('alternativas') || v.includes('explorar') || v.includes('repetici') || v.includes('creativo'))
                     )
                 );
             },
@@ -876,7 +876,7 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('bloquea') || v.includes('limita') || v.includes('transforma')) &&
+                    (v.includes('bloquea') || v.includes('limita') || v.includes('inmediata')) &&
                     (v.includes('intercambio') || v.includes('posibilidad') || v.includes('transformar'))
                 );
             },
@@ -905,7 +905,7 @@ const modules = {
                 const v = normalizar(raw);
                 return (
                     (v.includes('romper') || v.includes('patrones')) &&
-                    (v.includes('generar') || v.includes('alternativas') || v.includes('solución') || v.includes('solución'))
+                    (v.includes('generar') || v.includes('alternativas') || v.includes('soluci') || v.includes('nuev'))
                 );
             },
             tutor: 'Pensá qué se modifica al cambiar el enfoque.',
@@ -934,7 +934,7 @@ const modules = {
                 const v = normalizar(raw);
                 return (
                     (v.includes('aciertos') || v.includes('errores')) &&
-                    (v.includes('mejorar') || v.includes('decisiones') || v.includes('líder')) &&
+                    (v.includes('mejorar') || v.includes('decisiones') || v.includes('permit')) &&
                     (v.includes('reconocer') || v.includes('aciertos') || v.includes('identificar'))
                 );
             },
@@ -981,7 +981,7 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('técnicas') || v.includes('creatividad') || v.includes('aplicación') || v.includes('desbloquear')) &&
+                    (v.includes('permite') || v.includes('creati') || v.includes('aplica') || v.includes('desbloquear')) &&
                     (v.includes('pensamiento') || v.includes('encontrar') || v.includes('soluciones') || v.includes('habituales'))
                 );
             },
@@ -997,7 +997,7 @@ const modules = {
         '1. Primero se identifica el ______<br>' +
         '2. Luego se generan distintas ______<br>' +
         '3. Finalmente se evalúa la ______ elegida',
-    blanks: ['problema', 'alternativas', 'solución'],
+    blanks: ['problema', 'alternativas', 'soluci'],
     tutor: 'Pensá el proceso paso a paso.',
     explanation: 'Organizar el proceso creativo facilita la toma de decisiones.'
 },
@@ -1022,8 +1022,8 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('evaluación') || v.includes('resultados')) &&
-                    (v.includes('creatividad') || v.includes('identificar') || v.includes('favoreciendo') || v.includes('proceso'))
+                    (v.includes('evalua') || v.includes('resultados')) &&
+                    (v.includes('creati') || v.includes('identificar') || v.includes('favoreciendo') || v.includes('proceso'))
                 );
             },
             tutor: 'Pensá qué aprendés al revisar lo hecho.',
@@ -1051,8 +1051,8 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('ajuste') || v.includes('creatividad') || v.includes('mejora')) &&
-                    (v.includes('cambiarías') || v.includes('resultado') || v.includes('optimizar') || v.includes('experiencia'))
+                    (v.includes('ajuste') || v.includes('creati') || v.includes('mejora')) &&
+                    (v.includes('cambiar') || v.includes('resultado') || v.includes('optimizar') || v.includes('experiencia'))
                 );
             },
             tutor: 'Pensá qué cambiarías para mejorar un resultado.',
@@ -1079,9 +1079,9 @@ const modules = {
             validation: (raw) => {
                 const v = normalizar(raw);
                 return (
-                    (v.includes('reflexión') || v.includes('aprendizaje') || v.includes('creatividad')) &&
+                    (v.includes('reflexi') || v.includes('aprendizaje') || v.includes('creati')) &&
                     (v.includes('proceso') || v.includes('fortalece') || v.includes('creativo')) &&
-                    (v.includes('confianza') || v.includes('afrontar') || v.includes('desafíos'))
+                    (v.includes('confianza') || v.includes('afrontar') || v.includes('desaf'))
                 );
             },
             tutor: 'Pensá qué aprendiste al aplicar nuevas ideas.',
